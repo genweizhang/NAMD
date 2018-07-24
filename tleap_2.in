@@ -1,0 +1,13 @@
+source leaprc.protein.ff14SB
+source leaprc.gaff
+source leaprc.water.tip3p
+ABT = loadmol2 ../ABT_199.mol2
+check ABT
+loadamberparams ../ABT_199.frcmod
+complex = loadpdb 4bd2_complex.pdb
+saveamberparm complex complex.prmtop complex.inpcrd
+protein = loadpdb 4bd2_protein.pdb
+saveamberparm protein protein.prmtop protein.inpcrd
+ligand = loadpdb 4bd2_ligand.pdb
+saveamberparm ligand ligand.prmtop ligand.inpcrd
+quit

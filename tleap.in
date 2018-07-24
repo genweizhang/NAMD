@@ -1,0 +1,5 @@
+source leaprc.protein.ff14SB
+complex = loadpdb initial_tpp-1.pdb
+savepdb complex initial_tpp-1_pbcsetup.pdb   
+saveamberparm complex initial_tpp-1.prmtop initial_tpp-1.inpcrd
+quit
